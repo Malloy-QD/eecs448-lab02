@@ -29,19 +29,32 @@ bool LinkedList<T>::isEmpty() const
 template <typename T>
 int LinkedList<T>::size() const
 {
+int x=0;
+Node<T>* temp = m_front;
+if(temp!=nullptr){
+temp=temp->getNext();
+x++;
+}
+
 	/** TODO 
 		Fix this method
 	*/
 
-	return(m_size);
+	return(x);
 }
 
 template <typename T>
 bool LinkedList<T>::search(T value) const
 {
 	Node<T>* temp = m_front;
+	//Node<T>* temp2;
+	//temp2=new Node<T>(value);
 	bool isFound = false;
 for(int i=0;i<m_size;i++){
+if(value==temp->getValue()){
+isFound=true;
+}
+temp= temp-> getNext();
 
 }
 	/** TODO 
